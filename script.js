@@ -19,8 +19,11 @@ function playerChoice(){
     
     playerC = playerC.toLowerCase();
     
-    while (validInput(playerC) == false )
+    while (validInput(playerC) == false ) {
         playerC = prompt("Please enter correct word with or without Capital letters");
+        while (playerC === null) //will not let user to cancel or pass empty i.e, null
+            playerC = prompt("Please Enter Rock, paper or scissors");
+    }
     
     return playerC;
 }
