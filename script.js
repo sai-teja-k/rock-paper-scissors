@@ -13,12 +13,15 @@ function playRound(){
 function playerChoice(){
     //input from player
     let playerC = prompt("Enter Rock, paper or scissors");
-    while (playerC === null){ //will not let user to cancel or pass empty i.e, null
+
+    while (playerC === null) //will not let user to cancel or pass empty i.e, null
         playerC = prompt("Please Enter Rock, paper or scissors");
-    }
     
     playerC = playerC.toLowerCase();
-    //console.log(playerC);
+    
+    while (validInput(playerC) == false )
+        playerC = prompt("Please enter correct word with or without Capital letters");
+    
     return playerC;
 }
 
@@ -27,6 +30,10 @@ function computerChoice(){
     const computerC = choices[Math.floor(Math.random()*choices.length)];
     //console.log(computerC);
     return computerC;
+}
+
+function validInput(playerC){
+    return choices.includes(playerC);
 }
 
 game();
