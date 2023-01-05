@@ -1,4 +1,5 @@
 const choices = ["rock" , "paper" , "Scissors"];
+const winners = [];
 
 function game(){
     //play game five times
@@ -8,6 +9,9 @@ function game(){
 function playRound(){
     const playerSelection = playerChoice();
     const computerSelection = computerChoice();
+    let winner = checkWinner(playerSelection,computerSelection);
+    winners.push(winner);
+    console.log(winners)
 }
 
 function playerChoice(){
@@ -37,6 +41,23 @@ function computerChoice(){
 
 function validInput(playerC){
     return choices.includes(playerC);
+}
+
+function checkWinner(playerSelection,computerSelection){
+    if(playerSelection== computerSelection){
+        return "Tie"
+    }
+    else if(
+        (playerSelection== "rock" && computerSelection == "scissors") ||
+        (playerSelection== "paper" && computerSelection == "rock") ||
+        (playerSelection== "scissors" && computerSelection == "paper")
+    )
+    {
+        return "Player";
+    }
+    else{
+        return "Computer";
+    }
 }
 
 game();
