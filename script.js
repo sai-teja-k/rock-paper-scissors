@@ -1,20 +1,36 @@
 const choices = ["rock" , "paper" , "scissors"];
 const winners = [];
+let playerCount = 0;
+let computerCount = 0;
+let tieCount = 0;
 
 //play game five times
 function game(){
     for(let i=0;i<5;i++){
-        playRound();
+        playRound(i);
+    }
+
+    if(playerCount >= 3){
+        console.log("Player wins the game");
+    }
+    else if(computerCount >= 3){
+        console.log("Computer wins the game");
+    }
+    else{
+        console.log("Its a Tie");
     }
 }
 
-function playRound(){
+function playRound(round){
     const playerSelection = playerChoice();
     const computerSelection = computerChoice();
     let winner = checkWinner(playerSelection,computerSelection);
     winners.push(winner);
     console.log(winners)
-    console.log("----------------")
+    gameWinner(winners,round);
+    console.log(playerCount);
+    console.log(computerCount);
+    console.log(tieCount);
 }
 
  //input from player
@@ -62,4 +78,16 @@ function checkWinner(playerSelection,computerSelection){
     }
 }
 
+//check winners of 5 rounds
+function gameWinner(winners,round){
+    if (winners[round] === "Player"){
+        playerCount++;
+    }
+    else if(winners[round] === "Computer"){
+        computerCount++;
+    }
+    else{
+        tieCount++;
+    }
+}
 game();
