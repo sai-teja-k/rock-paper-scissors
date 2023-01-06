@@ -11,10 +11,10 @@ function game(){
     }
 
     if(playerCount >= 3){
-        console.log("Player wins the game");
+        console.log("Player wins the game by ",playerCount," Rounds");
     }
     else if(computerCount >= 3){
-        console.log("Computer wins the game");
+        console.log("Computer wins the game by ",computerCount," Rounds");
     }
     else{
         console.log("Its a Tie");
@@ -26,11 +26,9 @@ function playRound(round){
     const computerSelection = computerChoice();
     let winner = checkWinner(playerSelection,computerSelection);
     winners.push(winner);
-    console.log(winners)
+    console.log("Round ",round+1," winner is ",winner);
+    console.log("-----------------------------");
     gameWinner(winners,round);
-    console.log(playerCount);
-    console.log(computerCount);
-    console.log(tieCount);
 }
 
  //input from player
@@ -47,14 +45,14 @@ function playerChoice(){
         while (playerC === null) //will not let user to cancel or pass empty i.e, null
             playerC = prompt("Please Enter Rock, paper or scissors");
     }
-    console.log(playerC)
+    console.log("Player chose ",playerC)
     return playerC;
 }
 
 //input from computer
 function computerChoice(){
     const computerC = choices[Math.floor(Math.random()*choices.length)]; //random from 0 to 2 numbers floored
-    console.log(computerC);
+    console.log("Computer chose ",computerC);
     return computerC;
 }
 
