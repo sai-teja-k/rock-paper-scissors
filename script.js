@@ -1,9 +1,11 @@
-const choices = ["rock" , "paper" , "Scissors"];
+const choices = ["rock" , "paper" , "scissors"];
 const winners = [];
 
+//play game five times
 function game(){
-    //play game five times
-    playRound();
+    for(let i=0;i<5;i++){
+        playRound();
+    }
 }
 
 function playRound(){
@@ -12,10 +14,11 @@ function playRound(){
     let winner = checkWinner(playerSelection,computerSelection);
     winners.push(winner);
     console.log(winners)
+    console.log("----------------")
 }
 
+ //input from player
 function playerChoice(){
-    //input from player
     let playerC = prompt("Enter Rock, paper or scissors");
 
     while (playerC === null) //will not let user to cancel or pass empty i.e, null
@@ -28,14 +31,14 @@ function playerChoice(){
         while (playerC === null) //will not let user to cancel or pass empty i.e, null
             playerC = prompt("Please Enter Rock, paper or scissors");
     }
-    
+    console.log(playerC)
     return playerC;
 }
 
+//input from computer
 function computerChoice(){
-    //input from computer
-    const computerC = choices[Math.floor(Math.random()*choices.length)];
-    //console.log(computerC);
+    const computerC = choices[Math.floor(Math.random()*choices.length)]; //random from 0 to 2 numbers floored
+    console.log(computerC);
     return computerC;
 }
 
@@ -43,16 +46,15 @@ function validInput(playerC){
     return choices.includes(playerC);
 }
 
+//check who is the winner
 function checkWinner(playerSelection,computerSelection){
-    if(playerSelection== computerSelection){
+    if(playerSelection === computerSelection){
         return "Tie"
     }
     else if(
-        (playerSelection== "rock" && computerSelection == "scissors") ||
-        (playerSelection== "paper" && computerSelection == "rock") ||
-        (playerSelection== "scissors" && computerSelection == "paper")
-    )
-    {
+        (playerSelection === "rock" && computerSelection === "scissors") || 
+        (playerSelection === "paper" && computerSelection === "rock") || 
+        (playerSelection === "scissors" && computerSelection === "paper")){
         return "Player";
     }
     else{
