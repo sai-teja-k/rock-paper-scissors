@@ -1,0 +1,39 @@
+html {
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: aqua;
+}
+
+img{
+    display:block;
+    max-width: 150px;
+}
+
+button{
+    cursor: pointer;
+    border-color:aquamarine;
+    box-shadow: 0 0 1rem aquamarine;
+}
+
+.container{
+    width:auto;
+    height:auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    border:2px solid red;
+}
+
+.container div{
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+    max-height: 255px;
+}
