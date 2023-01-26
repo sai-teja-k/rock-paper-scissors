@@ -5,13 +5,19 @@ html {
 body,html {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family:monospace;
     font-size: 30px;
     text-align: center;
+    font-weight: bold;
 }
 
-h1{
-    text-decoration: overline;
+header{
+    text-decoration: overline  underline;
+    font-size: 50px;
+    margin-bottom: 10px;
+    background-color:black;
+    color: white;
+    height: fit-content;
 }
 
 img{
@@ -25,6 +31,11 @@ img{
     border-radius: 5px;
 }
 
+.button:hover{
+    border-color: red;
+    box-shadow:0 0 10px red;
+}
+
 .container{
     position: relative;
     width:auto;
@@ -33,7 +44,7 @@ img{
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .container div{
@@ -46,7 +57,7 @@ img{
 }
 
 .winners_div {
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     width:auto;
@@ -55,6 +66,18 @@ img{
     align-items: center;
 }
 
+.winner{
+    width:auto;
+    height:fit-content;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color:red;
+    padding: 20px 0px 20px 0px;
+    margin: 20px 0px 20px 0px;
+}
+
 #scoreboard {
-    margin-top: 20px;
+    margin-top: 10px;
+    font-size: 20px;
 }
