@@ -1,5 +1,5 @@
 html {
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
 }
 
 body,html {
@@ -8,32 +8,53 @@ body,html {
     font-family: sans-serif;
     font-size: 30px;
     text-align: center;
-    color: aqua;
+}
+
+h1{
+    text-decoration: overline;
 }
 
 img{
     display:block;
-    max-width: 150px;
+    min-width: 225px;
+    max-height: 225px;
 }
 
-button{
+.button{
     cursor: pointer;
-    border-color:aquamarine;
-    box-shadow: 0 0 1rem aquamarine;
+    border-radius: 5px;
 }
 
 .container{
+    position: relative;
     width:auto;
-    height:auto;
+    height:fit-content;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    border:2px solid red;
+    margin-top: 10px;
 }
 
 .container div{
-    border-color: #ffc600;
-    box-shadow: 0 0 1rem #ffc600;
-    max-height: 255px;
+    border-color:gray;
+    box-shadow: 8px 8px 5px gray;
+    min-width:225px;
+    max-height:fit-content;
+    border-radius: 5px;
+    text-decoration: underline;
+}
+
+.winners_div {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width:auto;
+    height:fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+#scoreboard {
+    margin-top: 20px;
 }
