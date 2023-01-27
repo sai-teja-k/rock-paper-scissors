@@ -11,33 +11,51 @@
     <header>
         <h1>Rock Paper Scissors</h1>
     </header>
-    <div class="container">
-        <div class="rock">
-            <button  class="button">
-                <img data-key="1" id="rock" src="img/rock.jpg">
-            </button>
-            <p>ROCK</p>
+    <div class="instructions">
+        <h2>INSTRUCTIONS</h2>
+        <p>your opponent is an artificial intelligence. see if you can win against it.</p>
+        <p>refresh to reset the game</p>
+        <ul>
+            <li>rock wins over scissors</li>
+            <li>paper wins over rock</li>
+            <li>scissors wins over paper</li>
+        </ul>
+    </div>
+    <div class="box">
+        <h2>player vs computer</h2>
+        <div class="container">
+            <div class="btn_div">
+                <button  class="button">
+                    <img id="rock" src="img/rock.jpg">
+                </button>
+                <p><span class="code">#</span>ROCK</p>
+            </div>
+            <div class="btn_div">
+                <button class="button">
+                    <img id="paper" src="img/paper.jpeg">
+                </button>
+                <p><span class="code">#</span>PAPER</p>
+            </div>
+            <div class="btn_div">
+                <button class="button">
+                    <img id="scissors" src="img/scissors.jpg">
+                </button>
+                <p><span class="code">#</span>SCISSORS</p>
+            </div>
         </div>
-        <div class="paper">
-            <button class="button">
-                <img data-key="2" id="paper" src="img/paper.jpeg">
-            </button>
-            <p>PAPER</p>
-        </div>
-        <div class="scissors">
-            <button class="button">
-                <img data-key="3" id="scissors" src="img/scissors.jpg">
-            </button>
-            <p>SCISSORS</p>
+        <div class="winners_div">
+            <div class="flash"></div>
         </div>
     </div>
-    <div class="winners_div">
-        <div class="winner"></div>
-        <div id="scoreboard">
-            <p>Wins: <span id="win">0</span></p>
-            <p>Loses: <span id="lose">0</span></p>
-            <p>Ties: <span id="tie">0</span></p>
-        </div>
+    <div class="choice">
+        <p>Player chose : <span id="player-choice" class="choose"></span></p>
+        <p>computer chose :<span id="computer-choice" class="choose"></span> </p>
+    </div>
+    <div id="scoreboard">
+        <p>Player Wins : <span id="win">0</span></p>
+        <p>Computer Wins : <span id="lose">0</span></p>
+        <p>Ties : <span id="tie">0</span></p>
+        <p>Round : <span id="round">0</span></p>
     </div>
 </body>
 <script src="./new-script/script.js"></script>
