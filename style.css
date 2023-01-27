@@ -6,15 +6,16 @@ body,html {
     margin: 0;
     padding: 0;
     font-family:monospace;
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 header{
     text-decoration: overline  underline;
     font-size: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     background-color:black;
     color: white;
     height: fit-content;
@@ -36,6 +37,66 @@ img{
     box-shadow:0 0 10px red;
 }
 
+.code{
+    color:rgba(0, 0, 0, 0.0001);
+    transition:display 2s ease-in-out;
+}
+
+.btn_div:hover .code{
+    color:red;
+}
+
+.instructions{
+    font-size:20px;
+    font-weight: normal;
+    position:absolute;
+    top:250px;
+    left:15px;
+    max-width:325px;
+    min-height:375px;
+    padding:10px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items:center;
+
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3.1px);
+    -webkit-backdrop-filter: blur(3.1px);
+    border: 1px solid rgba(255, 255, 255, 0.23);
+}
+
+.instructions ul{
+    color: red;
+    max-width: 225px;
+    padding: 10px;
+    font-weight: bold;
+
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3.1px);
+    -webkit-backdrop-filter: blur(3.1px);
+    border: 1px solid rgba(255, 255, 255, 0.23);
+}
+
+.box{
+    position: relative;
+    left:22vw;
+    max-width:60vw;
+    min-height:575px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3.1px);
+    -webkit-backdrop-filter: blur(3.1px);
+    border: 1px solid rgba(255, 255, 255, 0.23);
+}
+
 .container{
     position: relative;
     width:auto;
@@ -44,7 +105,7 @@ img{
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .container div{
@@ -57,7 +118,7 @@ img{
 }
 
 .winners_div {
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     width:auto;
@@ -66,7 +127,7 @@ img{
     align-items: center;
 }
 
-.winner{
+.flash{
     width:auto;
     height:fit-content;
     justify-content: center;
@@ -74,10 +135,37 @@ img{
     font-size: 50px;
     color:red;
     padding: 20px 0px 20px 0px;
-    margin: 20px 0px 20px 0px;
+    margin-top: 20px;
 }
 
-#scoreboard {
-    margin-top: 10px;
-    font-size: 20px;
+#scoreboard , .choice{
+    position: absolute;
+    top:255px;
+    right:30px;
+    padding-left:10px;
+    padding-right:10px;
+    max-width:275px;
+    height: fit-content;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3.1px);
+    -webkit-backdrop-filter: blur(3.1px);
+    border: 1px solid rgba(255, 255, 255, 0.23);
+}
+
+.choice{
+   top:600px;
+   max-width:250px;
+   min-height: 300px;
+}
+
+.choose{
+    color: red;
 }
